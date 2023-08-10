@@ -14,6 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "PROD_DATABASE_URL"
+    "host"     : "RDS_HOSTNAME",
+    "user"     : "RDS_USERNAME",
+    "password" : "RDS_PASSWORD",
+    "port"     : "RDS_PORT"
   }
 }
