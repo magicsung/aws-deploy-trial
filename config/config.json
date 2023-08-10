@@ -18,6 +18,7 @@
     "username": "RDS_USERNAME",
     "password": "RDS_PASSWORD",
     "port": "RDS_PORT",
-    "database": "RDS_DB_NAME"
+    "database": "RDS_DB_NAME",
+    "dialect": "mysql"
   }
 }
