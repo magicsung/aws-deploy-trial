@@ -11,7 +11,8 @@ const db = {};
 
 let sequelize;
 if (env === 'production') {
-  sequelize = new Sequelize(`mysql://${process.env[config.username]}:${process.env[config.password]}@${process.env[config.host]}/${process.env[config.database]}`, config);
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(`mysql://${process.env[config.username]}:${process.env[config.password]}@${process.env[config.dbhost]}/${process.env[config.database]}`, config);
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }

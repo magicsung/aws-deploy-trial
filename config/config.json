@@ -14,7 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "host": "RDS_HOSTNAME",
+    "dbhost": "RDS_HOSTNAME",
     "username": "RDS_USERNAME",
     "password": "RDS_PASSWORD",
     "port": "RDS_PORT",
