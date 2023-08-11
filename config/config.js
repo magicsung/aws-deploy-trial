@@ -1,4 +1,4 @@
-{
+module.exports = {
   "development": {
     "username": "root",
     "password": "1234",
@@ -14,11 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "dbhost": "RDS_HOSTNAME",
-    "username": "RDS_USERNAME",
-    "password": "RDS_PASSWORD",
-    "port": "RDS_PORT",
-    "database": "RDS_DB_NAME",
+    "host": process.env.RDS_HOSTNAME,
+    "username": process.env.RDS_USERNAME,
+    "password": process.env.RDS_PASSWORD,
+    "port": process.env.RDS_PORT,
+    "database": process.env.RDS_DB_NAME,
     "dialect": "mysql"
   }
 }

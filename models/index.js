@@ -10,13 +10,7 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-console.log(env);
-if (env === 'production') {
-  console.log(`mysql://${process.env[config.username]}:${process.env[config.password]}@${process.env[config.dbhost]}/${process.env[config.database]}`);
-  sequelize = new Sequelize(`mysql://${process.env[config.username]}:${process.env[config.password]}@${process.env[config.dbhost]}/${process.env[config.database]}`, config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 fs
   .readdirSync(__dirname)
