@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js ",
     "dev": "set NODE_ENV=development&&nodemon app.js",
-    "dbmigrate": "npx sequelize db:migrate"
+    "dbmigrate": "npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
